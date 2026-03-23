@@ -1,0 +1,32 @@
+import java.util.HashMap;
+import java.util.Scanner;
+public class InventorySystem {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+HashMap<String, Integer> inventory = new HashMap<>();
+System.out.println("===== INVENTORY MANAGEMENT SYSTEM =====");
+System.out.println("Enter the product details below");
+System.out.println();
+System.out.print("Enter Product Name: ");
+String product = sc.nextLine();
+System.out.print("Enter Quantity: ");
+int quantity = sc.nextInt();
+System.out.print("Enter Price of each item: ");
+int price = sc.nextInt()
+inventory.put(product, quantity);
+System.out.println();
+System.out.println("===== INVENTORY REPORT =====");
+for (String item : inventory.keySet()) {
+int qty = inventory.get(item);
+int totalValue = qty * price;
+System.out.println("Product Name : " + item);
+System.out.println("Available Quantity : " + qty);
+System.out.println("Price per Item : " + price);
+System.out.println("Total Stock Value : " + totalValue);
+System.out.println("--------------------------------------");
+}
+System.out.println("Inventory successfully stored using HashMap.");
+System.out.println("The system allows efficient storage and retrieval of product data.");
+System.out.println("HashMap provides fast access using key-value pair structure.");
+}
+}
